@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "a181db2c-e63f-4ba8-afd8-ce41a1a54d28",
+		"name": "bankMisrIrregration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10703346"
+	},
+	"item": [
+		{
+			"name": "savePlot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plotlocation\": \"shebin\",\r\n    \"plotNum\": \"12\",\r\n    \"plotDesc\": \"plot as area need irrgration now\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/bankMisrIrrigationService/api/irrigation/savePlot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bankMisrIrrigationService",
+						"api",
+						"irrigation",
+						"savePlot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPlots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/bankMisrIrrigationService/api/irrigation/getAllPlots",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bankMisrIrrigationService",
+						"api",
+						"irrigation",
+						"getAllPlots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editPlot",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"plotlocation\" : \"shebin -elkom\",\r\n    \"plotNum\":\"12\",\r\n    \"plotDesc\":\"plot as area need irrgration tommorrow\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/bankMisrIrrigationService/api/irrigation/editPlot/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"bankMisrIrrigationService",
+						"api",
+						"irrigation",
+						"editPlot",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConfigurePlotIrrigationCycle",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
